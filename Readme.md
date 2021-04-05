@@ -42,6 +42,11 @@ And enter in folder /var/www/symfony
 npm install
 ```
 
+Execute Scheme Create
+```
+php bin/console doctrine:schema:create
+```
+
 Create in /var/www/symfony/public/ folder uploads and inside movie
 
 # Command for create User
