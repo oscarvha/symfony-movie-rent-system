@@ -1,0 +1,10 @@
+services:
+  _defaults:
+    autowire: false
+    autoconfigure: true
+    public: false
+
+  App\Command\CreateAdminUserCommand:
+    tags: [console.command]
+    arguments:
+      - '@App\Service\Handler\CreateUserHandler'

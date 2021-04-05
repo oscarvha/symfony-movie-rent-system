@@ -1,0 +1,13 @@
+<h1>admin rents lists</h1>
+
+<div class="rents-admin__list">
+    <ul>
+        {% for rent in rents %}
+            <li class="movie-admin__item">
+                {{ rent.user.email }} - {{ rent.status }} - {{ rent.movie.title }} - {{ rent.createdAt|date("d/m/Y") }}
+                <div><a href="{{ path('edit_rent',{'id': rent.id}) }}">admin.rents.edit</a></div>
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>

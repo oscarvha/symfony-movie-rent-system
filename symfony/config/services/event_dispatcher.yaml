@@ -1,0 +1,27 @@
+services:
+  _defaults:
+    autowire: false
+    autoconfigure: true
+    public: false
+
+  # Configure event storage and publisher for send events in kernel terminate
+  App\EventDispatcher\EventStorage:
+    factory: ["App\\EventDispatcher\\EventStorage", "instance"]
+
+  App\EventDispatcher\EventPublisher:
+    factory: ["App\\EventDispatcher\\EventPublisher", "instance"]
+
+  App\EventDispatcher\TerminateSubscriber:
+    arguments:
+      - '@event_dispatcher'
+      - '@App\EventDispatcher\EventStorage'
+    tags:
+      - { name: kernel.event_terminate }
+
+      # Custom event listener
+  App\EventDispatcher\Event\Listener\OnRentWasChange:
+    arguments:
+      - '@App\Repository\RentRepositoryInterface'
+      - '@App\Mail\Sender\RentChangeStatusSender'
+    tags:
+      - { name: kernel.event_listener, event: RentStatusChange, method: handle }

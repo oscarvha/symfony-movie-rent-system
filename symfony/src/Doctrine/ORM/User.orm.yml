@@ -1,0 +1,28 @@
+App\Entity\User:
+    type: entity
+    table: user
+    repositoryClass: App\Doctrine\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+
+    fields:
+        username:
+            type: string
+            length: 180
+            unique: true
+
+        email:
+            type: string
+            length: 180
+            unique: true
+
+    embedded:
+        password:
+            columnPrefix: false
+            class: App\Entity\ValueObject\PasswordEncoded
+        roles:
+            columnPrefix: false
+            class: App\Entity\ValueObject\Roles

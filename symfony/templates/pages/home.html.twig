@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="title">rent.movies.title</h1>
+
+        <div class="movies-wrapper">
+                {% for movie in movies %}
+                        <div class="movie-item">
+                                <img class="img__shadow img-responsive" src="{{ movie.image }}" alt="">
+                                <div class="movie-item__title">
+                                    <h3 class="title title--lg"> {{ movie.title }}</h3>
+                                    <a class="btn-primary" href="{{ path('movie_view',{'id': movie.id}) }}">view.movie</a>
+                                </div>
+                        </div>
+                {% endfor %}
+        </div>
+    </div>
+{% endblock %}

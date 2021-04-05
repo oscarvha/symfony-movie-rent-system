@@ -1,0 +1,71 @@
+/* ==========================================================================
+   ##BASE
+   ======================================================================= */
+@charset "utf-8";
+
+// Base Rules
+//
+// A Base rule is applied to an element using an element selector, a
+// descendent selector, or a child selector, along with any pseudo-classes.
+// It doesn’t include any class or ID selectors. It is defining the default
+// styling for how that element should look in all occurrences on the page.
+html {
+
+  /* ----- Display & Box model ----- */
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+
+  color: white; // TODO: Eliminar, necesitaba ver algo xD
+}
+
+
+
+* {
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+
+body{
+  background-color: c-white();
+  color: c-black();
+  overflow-x: hidden;
+}
+
+
+
+
+
+/* ==========================================================================
+##Scroll Bar
+========================================================================== */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 2px 0 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(0deg, c-gray(darkest) 0%,c-gray(darker) 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: c-black(.5);
+  box-shadow: inset 2px 1px 1px rgba(255,255,255,0.075), inset -2px -4px 2px rgba(0,0,0,.25);
+}
+
+
+
+
+
+/* ==========================================================================
+##Selection Content
+========================================================================== */
+::selection{
+  background: color-theme(primary,base);
+  color: c-white();
+}

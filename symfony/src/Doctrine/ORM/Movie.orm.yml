@@ -1,0 +1,29 @@
+App\Entity\Movie:
+    type: entity
+    table: movie
+    repositoryClass: App\Doctrine\Repository\MovieRepository
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+
+    fields:
+        title:
+            type: string
+            length: 180
+            unique: true
+
+        reference:
+            type: string
+            length: 180
+            unique: true
+
+        image:
+            type: string
+            length: 100
+            nullable : true
+
+        stock:
+            type: integer
+            length: 10

@@ -1,0 +1,13 @@
+<div class="main-menu">
+        <div><a href="{{ path('home') }}">menu.home</a></div>
+    {% if app.user %}
+        {% if app.user.user.isUser %}
+            <div><a href="{{ path('view_rents') }}">menu.user.rents</a></div>
+            <div><a href="{{ path('home') }}">menu.logout</a></div>
+        {% endif %}
+    {% else %}
+        <div><a href="{{ path('login') }}">menu.login</a></div>
+        <div><a href="{{ path('register') }}">menu.register</a></div>
+    {% endif %}
+
+</div>

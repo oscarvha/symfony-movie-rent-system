@@ -1,0 +1,135 @@
+/*
+    ###COLORS
+    ============================================================================== */
+/**
+
+* Colour Palette
+* This is the primary, secondary, accent, gray scale and social colour palettes as described in the styleguide
+*/
+
+// base color defs
+$color-primary            : #c4423b;
+$color-secondary          : #3f5673;
+$color-tertiary           : #F77F00;
+$color-shade-amount       : 15%;
+$color-trans-amount       : 0.5;
+
+// color variable map
+$color-theme: (
+  // nested map inception
+  primary: (
+    base                  : $color-primary,
+    light                 : lighten($color-primary, $color-shade-amount),
+    dark                  : darken($color-primary, $color-shade-amount),
+    trans                 : transparentize($color-primary, $color-trans-amount)
+  ),
+  secondary: (
+    base                  : $color-secondary,
+    light                 : lighten($color-secondary, $color-shade-amount),
+    dark                  : darken($color-secondary, $color-shade-amount),
+    trans                 : transparentize($color-secondary, $color-trans-amount)
+  ),
+  tertiary: (
+    base                  : $color-tertiary,
+    light                 : lighten($color-tertiary, $color-shade-amount),
+    dark                  : darken($color-tertiary, $color-shade-amount),
+    trans                 : transparentize($color-tertiary, $color-trans-amount)
+  ),
+  extra: (
+   hover-link            : linear-gradient(60deg, #7b1fa2, #913f9e)
+
+  )
+);
+
+
+// contrast color defs
+$contrast-color: (
+  black                   : #1f292e,
+  white                   : #ffffff
+) !default;
+
+
+// copy color defs
+$color-copy: (
+  light                 : #C4C4C4,
+  def                   : #626970,
+  soft                  : #8D949B
+) !default;
+
+
+// Grey Scale
+$gray-scale: (
+  "lightest"              : #F6F7F8,
+  "lighter"               : #DFE3E6,
+  "light"                 : #B2BAC2,
+  "gray"                  : #ABB4BC,
+  "dark"                  : #494E54,
+  "darker"                : #2c3136,
+  "darkest"               : #1d2125
+) !default;
+
+
+
+// Social Networks
+$color-social: (
+  "twitter"               : rgb(64,153,255),
+  "facebook"              : rgb(59, 89, 182),
+  "instagram"             : #4E433C,
+  "googleplus"            : rgb(221, 75, 57),
+  "linkedin"              : #4875B4,
+  "youtube"               : #cd201f,
+  "pinterest"             : rgb(203, 32, 39),
+  "spotify"               : rgb(129,183,26),
+  "soundcloud"            : #f76600,
+  "vimeo"                 : #86B32D,
+  "flickr"                : #ff0084
+) !default;
+
+
+
+// Links Colors
+$color-link: (
+  "default"               : #0969a2,
+  "hover"                 : #2D46A2,
+  "actived"               : #7d63a2,
+  "visited"               : #6f2CA2
+) !default;
+
+
+
+// Status Colors
+$color-status: (
+  // nested map inception
+  success: (
+    base                  : #2f725d,
+    bg                    : #8de0c6
+  ),
+  danger: (
+    base                  : #992c3c,
+    bg                    : #EDAFB8
+  ),
+  warning: (
+    base                  : #827753,
+    bg                    : #FFECAF
+  ),
+  info: (
+    base                  : #296fa0,
+    bg                    : #A2D5F9
+  )
+);
+
+
+
+// Rating colors
+$rating: (
+  "1"               : #dd2c00,
+  "2"               : #ff5722,
+  "3"               : #ff9800,
+  "4"               : #ffc107,
+  "5"               : #f5dc00,
+  "6"               : #cddc39,
+  "7"               : #8bc34a,
+  "8"               : #4caf50,
+  "9"               : #43a047,
+  "10"               : #388e3c
+) !default;

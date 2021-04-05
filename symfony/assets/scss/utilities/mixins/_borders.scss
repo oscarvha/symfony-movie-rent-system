@@ -1,0 +1,9 @@
+@mixin separator-bottom{
+  border-bottom: 1px solid c-black(.75);
+  box-shadow: 0 1px 0 c-white(.1);
+}
+
+@mixin separator-top{
+  border-top: 1px solid c-white(.1);
+  box-shadow: 0 -1px 0 c-black(.75);
+}

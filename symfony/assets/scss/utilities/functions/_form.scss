@@ -1,0 +1,7 @@
+@function button($key: primary-background) {
+  @return map-get($button, $key);
+}
+
+@function input($key: height) {
+  @return map-get($input, $key);
+}

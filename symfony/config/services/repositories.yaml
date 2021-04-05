@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        autowire: false
+        autoconfigure: true
+        public: false
+
+    App\Repository\UserRepositoryInterface:
+        alias: App\Doctrine\Repository\UserRepository
+
+    App\Repository\MovieRepositoryInterface:
+        alias: App\Doctrine\Repository\MovieRepository
+
+    App\Repository\RentRepositoryInterface:
+        alias: App\Doctrine\Repository\RentRepository

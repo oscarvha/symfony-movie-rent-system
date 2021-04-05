@@ -1,0 +1,24 @@
+/*
+    ###Font-size
+============================================================================== */
+// Function to maintain consistent font size. You can see the variables used in _variables.scss.
+/*@function fz($font-size) {
+  @return map-get($size-vars, $font-size) * 1rem;
+}*/
+
+
+@function ff($key: default) {
+  @return map-get($font-family, $key);
+}
+
+@function fz($key: default, $map: rem) {
+  @return map-get(map-get($font-size, $map), $key);
+}
+
+@function fw($key: default) {
+  @return map-get($font-weight, $key);
+}
+
+@function lh($key: default) {
+  @return map-get($line-height, $key);
+}

@@ -1,0 +1,33 @@
+/* ==========================================================================
+   ##BUTTONS
+========================================================================== */
+
+$button-bg-color        : primary(default); // default color for buttons
+$button-text-color      : primary(default); // default color for buttons
+$button-border-color    : primary(default);
+$button-border-radius   : 3px;
+
+
+
+
+// Z-index
+// ============
+$z-index: (
+  'modal': 5000,
+  'toolbar': 2000,
+  'fixed': 500,
+  'above': 10,
+  'default': 1,
+  'below': -1,
+) !default;
+
+
+// Miscellaneous
+$image-path: '/assets/img';
+
+
+
+// Transitions
+$besizer: cubic-bezier(0.75, 0.25, 0.25, 0.75);
+
+$box-shadow-normal : 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);

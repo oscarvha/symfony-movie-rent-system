@@ -1,0 +1,58 @@
+.triangle__end {
+  position: relative;
+
+  &:after {
+      content: "";
+      position: absolute;
+      bottom: -2rem;
+      background: c-black();
+      right: 0;
+      z-index: -11;
+      transform: rotate(-2deg);
+      width: 110%;
+      height: 82%;
+      border-radius: 8px;
+
+    @include media(lg) {
+      height: 70%;
+    }
+  }
+}
+
+.triangle__end--button {
+  &:after {
+    bottom: -4rem;
+    transform: rotate(-2deg);
+  }
+}
+
+.triangle__end--tiny {
+  &:after {
+    height: 40%;
+  }
+}
+
+.triangle__end__overflow {
+
+}
+
+.triangle__end--reverse {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -2rem;
+    background: c-white();
+    right: 0;
+    z-index: 9;
+    transform: rotate(-2deg);
+    width: 110%;
+    height: 3%;
+    border-radius: 8px;
+
+    @include media(lg) {
+      height: 3%;
+    }
+  }
+}

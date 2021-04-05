@@ -1,0 +1,14 @@
+<h1>List Movie Admin</h1>
+
+<div class="movie-admin__list">
+    <ul>
+    {% for movie in movies %}
+       <li class="movie-admin__item">
+           {{ movie.title }} - {{ movie.reference }} - {{ movie.stock }}
+           <div><a href="{{ path('edit_movie',{'id': movie.id}) }}">admin.movie.edit</a></div>
+           <div><a href="{{ path('delete_movie',{'id': movie.id}) }}">admin.movie.delete</a></div>
+       </li>
+    {% endfor %}
+    </ul>
+
+</div>

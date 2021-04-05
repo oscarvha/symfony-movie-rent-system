@@ -1,0 +1,7 @@
+@function space($key: default) {
+  @return map-get($spacing, $key);
+}
+
+@function gutter($key: default) {
+  @return map-get($gutter, $key);
+}

@@ -1,0 +1,20 @@
+services:
+    _defaults:
+        autowire: false
+        autoconfigure: true
+        public: false
+
+    # Security
+    App\Security\UserChecker:
+
+    App\Security\UserProvider:
+        arguments:
+            - '@App\Repository\UserRepositoryInterface'
+
+
+    App\Security\AuthenticatedUserProvider:
+        arguments:
+            $tokenStorage: '@security.token_storage'
+
+    App\Security\AuthenticatedUserProviderInterface:
+        alias: App\Security\AuthenticatedUserProvider

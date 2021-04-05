@@ -1,0 +1,33 @@
+App\Entity\Rent:
+    type: entity
+    table: rent
+    repositoryClass: App\Doctrine\Repository\RentRepository
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+
+    fields:
+        createdAt:
+            type: datetime
+
+        updatedAt:
+            type: datetime
+
+    manyToOne:
+        movie:
+            targetEntity: App\Entity\Movie
+            joinColumn:
+                onDelete: CASCADE
+                onPersist: CASCADE
+        user:
+            targetEntity: App\Entity\User
+            joinColumn:
+                onDelete: CASCADE
+                onPersist: CASCADE
+
+    embedded:
+        status:
+            columnPrefix: false
+            class: App\Entity\ValueObject\RentStatus

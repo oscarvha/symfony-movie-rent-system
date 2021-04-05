@@ -1,0 +1,26 @@
+
+.movies-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  grid-gap: space(def);
+  justify-items: center;
+}
+.movie-item {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 500px;
+  position: relative;
+}
+
+.movie-item__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: space(md);
+}
+
+.title__post {
+  min-height: 72px;
+}

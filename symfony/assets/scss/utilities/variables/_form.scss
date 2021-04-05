@@ -1,0 +1,39 @@
+$button: (
+  // Light
+  light-bg              : c-white(),
+  light-color           : c-black(),
+  // Dark
+  dark-bg               : c-black(),
+  dark-color            : c-white(),
+  // Primary
+  primary-bg            : color-theme(primary,base),
+  primary-color         : c-white(),
+  // Success
+  success-bg            : c-status(success,bg),
+  success-color         : c-status(success,base),
+  // Warning
+  warning-bg            : c-status(warning,bg),
+  warning-color         : c-status(warning,base),
+  // Danger
+  danger-bg             : c-status(danger,bg),
+  danger-color          : c-status(danger,base),
+  // Info
+  info-bg               : c-status(info,bg),
+  info-color            : c-status(info,base),
+  padding               : 2rem
+) !default;
+
+
+$input: (
+  height                : 42px,
+  height-small          : 36px,
+  height-textarea       : 10em,
+  border-width          : 2px,
+  border-color          : c-gray(lighter),
+  border-color-hover    : c-gray(light),
+  border-color-focus    : c-status(info,base),
+  color                 : color-theme(copy),
+  mark-color            : c-status(info,base),
+  placeholder-color     : c-gray(lighter),
+  padding               : 1rem
+) !default;

@@ -1,0 +1,53 @@
+/*
+    ###Grayscale
+============================================================================== */
+// retrieve color from $colors map ie. `color(base, primary)`
+@function color-theme($color-name, $color-variant:null) {
+  // color variant is optional
+  @if ($color-variant != null) {
+    // map inception
+    @return map-get(map-get($color-theme, $color-name), $color-variant);
+  } @else {
+    @return map-get($color-theme, $color-name);
+  }
+}
+
+
+// Function to maintain consistent grayscale. You can see the variables used in /utilities/variables/_colors.scss.
+@function c-gray($key: default, $opacity: 1) {
+  @return rgba(map-get($gray-scale, $key), $opacity);
+}
+
+// Function to maintain consistent copy colors. You can see the variables used in /utilities/variables/_colors.scss.
+@function c-copy($copy-name) {
+  @return map-get($color-copy, $copy-name);
+}
+
+
+// Function to maintain consistent social colors. You can see the variables used in /utilities/variables/_colors.scss.
+@function c-social($social-name) {
+  @return map-get($color-social, $social-name);
+}
+
+
+// Function to maintain consistent link colors. You can see the variables used in /utilities/variables/_colors.scss.
+@function c-link($key: default, $opacity: 1) {
+  @return rgba(map-get($color-link, $key), $opacity);
+}
+
+
+@function c-white($opacity: 1) {
+  @return rgba(map-get($contrast-color, white), $opacity);
+}
+
+
+@function c-black($opacity: 1) {
+  @return rgba(map-get($contrast-color, black), $opacity);
+}
+
+
+// Function to maintain consistent status. You can see the variables used in /utilities/variables/_colors.scss.
+@function c-status($color-name, $color-variant) {
+  // map inception
+  @return map-get(map-get($color-status, $color-name), $color-variant);
+}

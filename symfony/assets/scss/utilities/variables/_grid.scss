@@ -1,0 +1,59 @@
+// Bootstrap 4 grid override
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+  xs  : 0,
+  sm  : 576px,
+  md  : 768px,
+  lg  : 992px,
+  xl  : 1200px,
+  xxl : 1400px,
+  xxxl: 1800px
+) !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  sm  : 540px,
+  md  : 720px,
+  lg  : 960px,
+  xl  : 1140px,
+  xxl : 1280px,
+  xxxl: 1690px
+) !default;
+
+$grid-gutter-width-base: 30px !default;
+
+$grid-gutter-widths: (
+  xs  : $grid-gutter-width-base,
+  sm  : $grid-gutter-width-base,
+  md  : $grid-gutter-width-base,
+  lg  : $grid-gutter-width-base,
+  xl  : $grid-gutter-width-base,
+  xxl : $grid-gutter-width-base * 2,
+  xxxl: $grid-gutter-width-base * 2
+) !default;
+
+
+$spacing: (
+  xs            : .25rem,
+  sm            : .5rem,
+  def           : 1rem,
+  md            : 2rem,
+  lg            : 4rem,
+  xl            : 8rem
+) !default;
+
+
+$gutter: (
+  xs        : .5rem,
+  sm        : .75rem,
+  def       : 1rem,
+  md        : 2rem,
+  lg        : 4rem,
+  xl        : 8rem
+) !default;

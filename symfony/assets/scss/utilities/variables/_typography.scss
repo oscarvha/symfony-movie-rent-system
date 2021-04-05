@@ -1,0 +1,68 @@
+/* ==========================================================================
+   ##FONTS
+========================================================================== */
+$font-family: (
+  base       : ('EB Garamond', serif),
+  display    : ( 'Oswald', sans-serif),
+/*  serif      : ('Abril Fatface', Georgia, Times, Times New Roman, serif),*/
+  mono       : (Consolas, 'courier new', courier, monospace),
+) !default;
+
+
+$font-size: (
+  px: (
+    xs    : 12px,
+    sm    : 14px,
+    def    : 16px,
+    md    : 21px,
+    lg    : 28px,
+    xl    : 42px,
+  ),
+  rem: (
+    xs    : .75rem,
+    sm    : .85rem,
+    def    : 1rem,
+    mdp     : 1.2rem,
+    md    : 1.5rem,
+    lg    : 2rem,
+    xl    : 4rem,
+    xxl   : 6rem
+  ),
+) !default;
+
+
+$font-weight: (
+  thin        : 100,
+  extralight  : 200,
+  light       : 300,
+  regular     : 400,
+  medium      : 500,
+  semibold    : 600,
+  bold        : 700,
+  extrabold   : 800,
+  black       : 900,
+) !default;
+
+
+$line-height: (
+  xs        : 1.1,
+  sm        : 1.25,
+  def        : 1.5,
+  md        : 1.75,
+  lg        : 2.5,
+  xl        : 3,
+) !default;
+
+
+
+
+
+// Base Sizes
+// ==========
+
+// Base font size in used in _mixins.scss
+$base-font-size               : 16px;
+
+
+// Base line-height in used in _mixins.scss
+$base-line-height             : 1.5;

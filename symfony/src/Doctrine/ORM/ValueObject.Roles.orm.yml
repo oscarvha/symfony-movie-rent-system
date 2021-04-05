@@ -1,0 +1,6 @@
+App\Entity\ValueObject\Roles:
+  type: embeddable
+  fields:
+    values:
+      type: array
+      column: roles

@@ -1,0 +1,46 @@
+services:
+  _defaults:
+    autowire: false
+    autoconfigure: true
+    public: true
+
+  # User
+  App\Service\Handler\CreateUserHandler:
+    arguments:
+      $userRepository: '@App\Repository\UserRepositoryInterface'
+
+  # Movie Create
+  App\Service\Handler\MovieCreateHandler:
+    arguments:
+      $movieRepository: '@App\Repository\MovieRepositoryInterface'
+      $userRepository: '@App\Repository\UserRepositoryInterface'
+
+  # Movie Create
+  App\Service\Handler\MovieDeleteHandler:
+    arguments:
+      $movieRepository: '@App\Repository\MovieRepositoryInterface'
+      $userRepository: '@App\Repository\UserRepositoryInterface'
+
+  # Movie Update
+  App\Service\Handler\MovieUpdateHandler:
+    arguments:
+      $movieRepository: '@App\Repository\MovieRepositoryInterface'
+      $userRepository: '@App\Repository\UserRepositoryInterface'
+
+  # RentMovie
+  App\Service\Handler\RentMovieHandler:
+    arguments:
+      $movieRepository: '@App\Repository\MovieRepositoryInterface'
+      $userRepository: '@App\Repository\UserRepositoryInterface'
+
+  # RentMovie
+  App\Service\Handler\RentUserChangeStatusHandler:
+    arguments:
+      $userRepository: '@App\Repository\UserRepositoryInterface'
+      $rentRepository: '@App\Repository\RentRepositoryInterface'
+
+  # RentMovieChangeStatus
+  App\Service\Handler\RentChangeStatusHandler:
+    arguments:
+      $userRepository: '@App\Repository\UserRepositoryInterface'
+      $rentRepository: '@App\Repository\RentRepositoryInterface'

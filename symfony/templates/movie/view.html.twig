@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<img src="{{ movie.image }}" alt="">
+
+<h1>{{ movie.title }}</h1>
+<span>{{ movie.reference }}</span>
+{% if app.user %}
+    {% if app.user.user.isUser and movie.availableForRent %}
+        movie_view
+        <a class="btn-primary" href="{{ path('rent_movie',{'id': movie.id}) }}">rent.movie</a>
+    {% endif %}
+{% endif %}
+{% endblock %}

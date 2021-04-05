@@ -1,0 +1,20 @@
+/* ==========================================================================
+##Link Behavior: lightest to light
+========================================================================== */
+@mixin link-light{
+  
+  /* ----- Appearance ----- */
+  color: c-white(.5);
+  
+  /* ----- Typography ----- */
+  text-decoration: none;
+  
+  /* ----- Animations ----- */
+  transition: color .5s ease;
+  
+  // Status Hover
+  &:hover,
+  &:focus{
+    color: c-white();
+  }
+}

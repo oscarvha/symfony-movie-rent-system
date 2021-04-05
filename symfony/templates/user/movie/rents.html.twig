@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<h1>Rent User Movies</h1>
+
+<div class="movie-admin__list">
+    <ul>
+        {% for rent in rents %}
+            <li class="movie-admin__item">
+                {{ rent.movie.title }} - {{ rent.status }} -  {{ rent.createdAt|date("d/m/Y") }}
+                <a href="{{ path('rent_cancel_movie',{'id': rent.id}) }}">user.movie.cancel.rent</a>
+                <a href="{{ path('rent_return_movie',{'id': rent.id}) }}">user.movie.return.rent</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+</div>
+{% endblock %}

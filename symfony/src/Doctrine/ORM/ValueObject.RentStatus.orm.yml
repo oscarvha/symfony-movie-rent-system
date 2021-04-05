@@ -1,0 +1,6 @@
+App\Entity\ValueObject\RentStatus:
+  type: embeddable
+  fields:
+    status:
+      type: string
+      column: rent_status
