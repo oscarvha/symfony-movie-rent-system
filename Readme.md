@@ -60,6 +60,13 @@ Roles availables:
 ROLE_ADMIN
 ROLE_USER
 
+# TO COMPILE SCSS AND JS
+Execute in /var/www/symfony/
+
+```
+npm run watch 
+```
+for listen change in directory /var/www/symfony/assets
 
 # ROADMAP - NEXT STEPS
 - Flashbag sistem to show application message
