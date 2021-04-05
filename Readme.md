@@ -7,7 +7,7 @@ This is a complete stack for running Symfony 5 into Docker containers using dock
 It is composed by 3 containers:
 
 - `nginx`, acting as the webserver.
-- `php`, the PHP-FPM container with the 7.4 PHPversion.
+- `php`, the PHP-FPM container with the 8 PHPversion.
 - `db` which is the MySQL database container with a **MySQL 8.0** image.
 
 ## Installation
