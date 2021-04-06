@@ -69,6 +69,7 @@ npm run watch
 for listen change in directory /var/www/symfony/assets
 
 # ROADMAP - NEXT STEPS
+- Pagination List Movies
 - Flashbag sistem to show application message
 - Finish events when change status rent
 - Change ORM mapping with YAML (Deprecate in doctrine 3.0)
